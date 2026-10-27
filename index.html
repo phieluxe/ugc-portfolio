@@ -7,7 +7,7 @@
 <meta name="description" content="UGC Creator aus Österreich: authentische Videos und Fotos für Marken im DACH-Raum. Lieferung in 7 Tagen.">
 <meta property="og:title" content="Sophie Kösslbacher · UGC Creator">
 <meta property="og:description" content="Content, der nicht nach Werbung aussieht. UGC-Videos und Fotos für Marken im DACH-Raum.">
-<meta property="og:image" content="assets/img/portrait.jpg">
+<meta property="og:image" content="https://phieluxe.github.io/ugc-portfolio/assets/img/hero-portrait.jpg">
 <style>
 @font-face{font-family:"Cormorant";font-weight:300;font-style:normal;font-display:swap;src:url(assets/fonts/cormorant-garamond-latin-300-normal.woff2) format("woff2")}
 @font-face{font-family:"Cormorant";font-weight:300;font-style:italic;font-display:swap;src:url(assets/fonts/cormorant-garamond-latin-300-italic.woff2) format("woff2")}
@@ -60,10 +60,10 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:7
 @media(max-width:860px){.nav-links{display:none}.logo small{display:none}}
 
 /* Hero */
-.hero{min-height:100svh;display:flex;align-items:center;padding:120px 0 80px;position:relative}
+.hero{min-height:100svh;display:flex;align-items:center;padding:110px 0 60px;position:relative}
 .hero::before{content:"";position:absolute;width:60vw;height:60vw;max-width:780px;max-height:780px;right:-10vw;top:-10vw;background:radial-gradient(circle,rgba(185,163,255,.16),transparent 65%);pointer-events:none}
 .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(40px,6vw,90px);align-items:center}
-.hero h1{font-size:clamp(50px,8vw,112px);margin:26px 0 30px}
+.hero h1{font-size:clamp(46px,6.2vw,90px);margin:22px 0 26px}
 .hero p.lead{font-size:clamp(16px,1.4vw,18px);color:var(--muted);max-width:520px}
 .hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:40px}
 .hero-media{position:relative;justify-self:end;width:100%;max-width:440px}
@@ -73,7 +73,7 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:7
 .hero-clip video{width:100%;height:100%;object-fit:cover}
 .hero-tag{position:absolute;right:-4%;top:12%;background:rgba(18,17,20,.85);backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:14px;padding:14px 18px;font-size:12px;color:var(--muted)}
 .hero-tag b{display:block;font-family:var(--serif);font-weight:300;font-size:30px;color:var(--text);line-height:1}
-.facts{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:clamp(24px,5vw,60px);margin-top:56px;padding-top:28px;border-top:1px solid var(--line)}
+.facts{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:clamp(24px,5vw,60px);margin-top:44px;padding-top:24px;border-top:1px solid var(--line)}
 .facts b{display:block;font-family:var(--serif);font-weight:300;font-size:clamp(30px,3.4vw,44px);line-height:1}
 .facts span{font-size:12px;color:var(--muted);letter-spacing:.04em}
 @media(max-width:860px){
@@ -230,8 +230,8 @@ footer button:hover{color:var(--text)}
       </div>
     </div>
     <div class="hero-media rv">
-      <div class="hero-photo"><img src="assets/img/portrait.jpg" alt="Sophie Kösslbacher, Porträt"></div>
-      <div class="hero-clip"><video src="assets/video/ugc-02.mp4" poster="assets/video/ugc-02.jpg" autoplay muted loop playsinline preload="metadata"></video></div>
+      <div class="hero-photo"><img src="assets/img/hero-portrait.jpg" alt="Sophie Kösslbacher, Porträt"></div>
+      <div class="hero-clip"><video src="assets/video/hero-clip.mp4" poster="assets/video/hero-clip.jpg" autoplay muted loop playsinline preload="metadata"></video></div>
       <div class="hero-tag"><b>937 K</b>Aufrufe auf einem Video</div>
     </div>
   </div>
@@ -302,8 +302,8 @@ footer button:hover{color:var(--text)}
 <section class="about" id="ueber-mich">
   <div class="wrap about-grid">
     <div class="about-img rv">
-      <img src="assets/img/p02.jpg" alt="Sophie mit Schmuck">
-      <img src="assets/img/p06.jpg" alt="Sophies Pudel mit Tablet">
+      <img src="assets/img/about-1.jpg" alt="Sophie auf einer Terrasse am Meer">
+      <img src="assets/img/about-2.jpg" alt="Sophie mit ihrem Pudel auf einem Boot">
     </div>
     <div>
       <div class="eyebrow rv">Über mich</div>
@@ -354,6 +354,7 @@ footer button:hover{color:var(--text)}
       <img class="rv" loading="lazy" src="assets/img/p20.jpg" alt="Sophie vor Orchideen im Hotel">
       <img class="rv" loading="lazy" src="assets/img/p01.jpg" alt="Sophie mit Pfeffersalbe">
       <img class="rv" loading="lazy" src="assets/img/p18.jpg" alt="Sophie im weißen Kleid">
+      <img class="rv" loading="lazy" src="assets/img/p22.jpg" alt="Sophie auf einer Treppe am Abend">
     </div>
   </div>
 </section>
