@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sophie Kösslbacher · UGC Creator</title>
+<meta name="description" content="UGC Creator aus Österreich: authentische Videos und Fotos für Marken im DACH-Raum. Lieferung in 7 Tagen.">
+<meta property="og:title" content="Sophie Kösslbacher · UGC Creator">
+<meta property="og:description" content="Content, der nicht nach Werbung aussieht. UGC-Videos und Fotos für Marken im DACH-Raum.">
+<meta property="og:image" content="assets/img/portrait.jpg">
+<style>
+@font-face{font-family:"Cormorant";font-weight:300;font-style:normal;font-display:swap;src:url(assets/fonts/cormorant-garamond-latin-300-normal.woff2) format("woff2")}
+@font-face{font-family:"Cormorant";font-weight:300;font-style:italic;font-display:swap;src:url(assets/fonts/cormorant-garamond-latin-300-italic.woff2) format("woff2")}
+@font-face{font-family:"Cormorant";font-weight:400;font-style:normal;font-display:swap;src:url(assets/fonts/cormorant-garamond-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"Inter";font-weight:300;font-display:swap;src:url(assets/fonts/inter-latin-300-normal.woff2) format("woff2")}
+@font-face{font-family:"Inter";font-weight:400;font-display:swap;src:url(assets/fonts/inter-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"Inter";font-weight:500;font-display:swap;src:url(assets/fonts/inter-latin-500-normal.woff2) format("woff2")}
+
+:root{
+  --bg:#0a0a0b;
+  --bg-2:#121114;
+  --line:rgba(255,255,255,.12);
+  --text:#f4f1f5;
+  --muted:rgba(244,241,245,.62);
+  --violet:#b9a3ff;
+  --pink:#f4a6d0;
+  --grad:linear-gradient(90deg,var(--violet),var(--pink));
+  --serif:"Cormorant",Georgia,serif;
+  --sans:"Inter",system-ui,-apple-system,sans-serif;
+  --gutter:clamp(16px,5vw,64px);
+  --max:1240px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-weight:300;font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,video{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+.eyebrow{font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:14px}
+.eyebrow::before{content:"";width:28px;height:1px;background:var(--grad)}
+h1,h2,h3{font-family:var(--serif);font-weight:300;letter-spacing:-.01em;line-height:1.05}
+h2{font-size:clamp(38px,5.6vw,72px)}
+em{font-style:italic;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;padding-right:.06em}
+section{padding:clamp(80px,12vw,150px) 0}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 28px;border-radius:999px;font-size:13px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;transition:transform .25s,background .25s,color .25s}
+.btn-light{background:var(--text);color:var(--bg)}
+.btn-light:hover{transform:translateY(-2px);background:#fff}
+.btn-ghost{border:1px solid var(--line)}
+.btn-ghost:hover{border-color:var(--text)}
+
+/* Nav */
+nav{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .3s,backdrop-filter .3s}
+nav.solid{background:rgba(10,10,11,.78);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{font-family:var(--serif);font-size:24px;font-weight:400;letter-spacing:.01em}
+.logo small{font-family:var(--sans);font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);margin-left:10px}
+.nav-links{display:flex;gap:34px;font-size:13px;color:var(--muted)}
+.nav-links a:hover{color:var(--text)}
+.nav-cta{padding:11px 20px;font-size:11px}
+@media(max-width:860px){.nav-links{display:none}.logo small{display:none}}
+
+/* Hero */
+.hero{min-height:100svh;display:flex;align-items:center;padding:120px 0 80px;position:relative}
+.hero::before{content:"";position:absolute;width:60vw;height:60vw;max-width:780px;max-height:780px;right:-10vw;top:-10vw;background:radial-gradient(circle,rgba(185,163,255,.16),transparent 65%);pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(40px,6vw,90px);align-items:center}
+.hero h1{font-size:clamp(50px,8vw,112px);margin:26px 0 30px}
+.hero p.lead{font-size:clamp(16px,1.4vw,18px);color:var(--muted);max-width:520px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:40px}
+.hero-media{position:relative;justify-self:end;width:100%;max-width:440px}
+.hero-photo{border-radius:220px 220px 18px 18px;overflow:hidden;aspect-ratio:3/4}
+.hero-photo img{width:100%;height:100%;object-fit:cover}
+.hero-clip{position:absolute;left:-18%;bottom:-6%;width:44%;aspect-ratio:9/16;border-radius:16px;overflow:hidden;border:4px solid var(--bg);box-shadow:0 30px 60px rgba(0,0,0,.6)}
+.hero-clip video{width:100%;height:100%;object-fit:cover}
+.hero-tag{position:absolute;right:-4%;top:12%;background:rgba(18,17,20,.85);backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:14px;padding:14px 18px;font-size:12px;color:var(--muted)}
+.hero-tag b{display:block;font-family:var(--serif);font-weight:300;font-size:30px;color:var(--text);line-height:1}
+.facts{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:clamp(24px,5vw,60px);margin-top:56px;padding-top:28px;border-top:1px solid var(--line)}
+.facts b{display:block;font-family:var(--serif);font-weight:300;font-size:clamp(30px,3.4vw,44px);line-height:1}
+.facts span{font-size:12px;color:var(--muted);letter-spacing:.04em}
+@media(max-width:860px){
+  .hero-grid{grid-template-columns:1fr}
+  .hero-media{justify-self:center;max-width:340px;margin:20px auto 0}
+  .hero-clip{left:-10%}
+  .hero-tag{right:-6%}
+  .facts{grid-template-columns:repeat(3,1fr);gap:16px}
+}
+
+/* Logos */
+.brands{padding:46px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden}
+.brands .eyebrow{justify-content:center;margin-bottom:28px}
+.brands .eyebrow::before{display:none}
+.marquee{display:flex;gap:28px;width:max-content;animation:scroll 48s linear infinite}
+.brands:hover .marquee{animation-play-state:paused}
+.marquee img{width:84px;height:84px;border-radius:50%;object-fit:cover;filter:grayscale(1) contrast(1.05);opacity:.75;transition:filter .3s,opacity .3s}
+.marquee img:hover{filter:none;opacity:1}
+@keyframes scroll{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.marquee{animation:none;flex-wrap:wrap;justify-content:center;width:auto}}
+
+/* Section head */
+.head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:clamp(40px,6vw,70px);flex-wrap:wrap}
+.head h2{margin-top:20px}
+.head p{max-width:400px;color:var(--muted)}
+
+/* Videos */
+.reel{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:18px}
+.clip{position:relative;aspect-ratio:9/16;border-radius:16px;overflow:hidden;background:var(--bg-2);cursor:pointer}
+.clip video{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.clip:hover video{transform:scale(1.03)}
+.clip .play{position:absolute;inset:auto 14px 14px auto;width:46px;height:46px;border-radius:50%;background:rgba(244,241,245,.92);display:grid;place-items:center;transition:opacity .3s,transform .3s}
+.clip .play svg{width:16px;height:16px;fill:var(--bg);margin-left:2px}
+.clip.playing .play{opacity:0;transform:scale(.8)}
+.clip .label{position:absolute;left:14px;top:14px;font-size:10px;letter-spacing:.2em;text-transform:uppercase;background:rgba(10,10,11,.6);backdrop-filter:blur(6px);padding:6px 10px;border-radius:99px}
+.reel .clip:nth-child(even){transform:translateY(36px)}
+@media(max-width:620px){
+  .reel{grid-template-columns:1fr 1fr;gap:12px}
+  .reel .clip:nth-child(even){transform:translateY(24px)}
+  .clip .play{width:38px;height:38px;inset:auto 10px 10px auto}
+}
+
+/* Services */
+.services{background:var(--bg-2)}
+.svc{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
+.svc div{padding:34px 28px 38px 0;border-bottom:1px solid var(--line)}
+.svc div:not(:nth-child(3n+1)){padding-left:28px;border-left:1px solid var(--line)}
+.svc span{font-family:var(--serif);font-size:15px;color:var(--violet)}
+.svc h3{font-size:30px;margin:14px 0 10px}
+.svc p{color:var(--muted);font-size:15px}
+@media(max-width:860px){
+  .svc{grid-template-columns:1fr}
+  .svc div,.svc div:not(:nth-child(3n+1)){padding:28px 0;border-left:0}
+}
+
+/* About */
+.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(40px,7vw,110px);align-items:center}
+.about-img{position:relative}
+.about-img img{border-radius:18px;width:100%;aspect-ratio:4/5;object-fit:cover}
+.about-img img + img{position:absolute;width:42%;right:-10%;bottom:-8%;aspect-ratio:3/4;border:4px solid var(--bg)}
+.about h2{margin:20px 0 28px}
+.about p{color:var(--muted);margin-bottom:18px;max-width:560px}
+.about p strong{color:var(--text);font-weight:400}
+.handles{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+@media(max-width:860px){.about-grid{grid-template-columns:1fr}.about-img{max-width:420px}.about-img img + img{right:-4%}}
+
+/* Results */
+.results{background:var(--bg-2)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.stat{border:1px solid var(--line);border-radius:18px;padding:26px;display:flex;flex-direction:column;gap:22px}
+.stat b{font-family:var(--serif);font-weight:300;font-size:clamp(46px,5vw,64px);line-height:1}
+.stat .what{font-size:14px;color:var(--muted)}
+.stat .what strong{display:block;color:var(--text);font-weight:400;font-size:15px;margin-bottom:2px}
+.stat img{border-radius:12px;width:100%;aspect-ratio:9/12;object-fit:cover;object-position:top;opacity:.9}
+@media(max-width:860px){.stats{grid-template-columns:1fr}.stat img{aspect-ratio:4/3}}
+
+/* Photos */
+.photos{columns:4 220px;column-gap:14px}
+.photos img{width:100%;border-radius:12px;margin-bottom:14px;break-inside:avoid}
+
+/* Feedback */
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.quote{border:1px solid var(--line);border-radius:18px;padding:32px 28px;display:flex;flex-direction:column;justify-content:space-between;gap:28px}
+.quote p{font-family:var(--serif);font-size:24px;line-height:1.3;font-weight:300}
+.quote p::before{content:"„";display:block;font-size:64px;line-height:.6;color:var(--pink);margin-bottom:6px}
+.quote span{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+@media(max-width:860px){.quotes{grid-template-columns:1fr}}
+
+/* Process */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:s}
+.step{padding-top:24px;border-top:1px solid var(--line);position:relative}
+.step::before{counter-increment:s;content:"0" counter(s);font-family:var(--serif);font-size:15px;color:var(--violet)}
+.step h3{font-size:28px;margin:12px 0 8px}
+.step p{color:var(--muted);font-size:15px}
+.step.hl{border-top:1px solid transparent;border-image:var(--grad) 1}
+@media(max-width:860px){.steps{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.steps{grid-template-columns:1fr}}
+
+/* Contact */
+.contact{text-align:center;position:relative;overflow:hidden}
+.contact::before{content:"";position:absolute;left:50%;top:50%;width:900px;height:900px;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(244,166,208,.12),transparent 60%);pointer-events:none}
+.contact .eyebrow{justify-content:center}
+.contact h2{font-size:clamp(46px,8vw,110px);margin:24px auto 28px;max-width:900px}
+.contact p{color:var(--muted);max-width:540px;margin:0 auto 40px}
+.contact .hero-actions{justify-content:center;margin-top:0}
+.mail{display:block;margin-top:36px;font-family:var(--serif);font-size:clamp(22px,3vw,30px)}
+.mail:hover{color:var(--pink)}
+
+/* Footer */
+footer{border-top:1px solid var(--line);padding:40px 0 60px;font-size:13px;color:var(--muted)}
+footer .row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer button{background:none;border:0;color:inherit;font:inherit;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+footer button:hover{color:var(--text)}
+.legal{display:none;margin-top:30px;padding-top:30px;border-top:1px solid var(--line);font-size:13px;line-height:1.8;max-width:760px}
+.legal.open{display:block}
+.legal h4{font-family:var(--serif);font-weight:400;font-size:22px;color:var(--text);margin-bottom:10px}
+.legal p{margin-bottom:14px}
+
+/* Reveal */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s ease}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="wrap">
+    <a href="#top" class="logo">Sophie Kösslbacher<small>UGC Creator</small></a>
+    <div class="nav-links">
+      <a href="#arbeiten">Arbeiten</a>
+      <a href="#leistungen">Leistungen</a>
+      <a href="#ueber-mich">Über mich</a>
+      <a href="#ergebnisse">Ergebnisse</a>
+    </div>
+    <a href="#kontakt" class="btn btn-light nav-cta">Anfragen</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow rv">UGC &amp; Content Marketing · DACH</div>
+      <h1 class="rv">Content, der nicht nach <em>Werbung</em> aussieht.</h1>
+      <p class="lead rv">Ich bin Sophie, UGC Creator aus Österreich. Ich mache Videos und Fotos für deine Marke, die sich anfühlen wie eine echte Empfehlung und nicht wie ein Spot.</p>
+      <div class="hero-actions rv">
+        <a href="#kontakt" class="btn btn-light">Zusammenarbeit anfragen</a>
+        <a href="#arbeiten" class="btn btn-ghost">Arbeiten ansehen</a>
+      </div>
+      <div class="facts rv">
+        <div><b>47.600</b><span>Abos auf YouTube</span></div>
+        <div><b>3 Jahre</b><span>auf Social Media</span></div>
+        <div><b>7 Tage</b><span>bis zur Lieferung</span></div>
+      </div>
+    </div>
+    <div class="hero-media rv">
+      <div class="hero-photo"><img src="assets/img/portrait.jpg" alt="Sophie Kösslbacher, Porträt"></div>
+      <div class="hero-clip"><video src="assets/video/ugc-02.mp4" poster="assets/video/ugc-02.jpg" autoplay muted loop playsinline preload="metadata"></video></div>
+      <div class="hero-tag"><b>937 K</b>Aufrufe auf einem Video</div>
+    </div>
+  </div>
+</header>
+
+<div class="brands">
+  <div class="eyebrow">Marken, mit denen ich gearbeitet habe</div>
+  <div class="marquee" id="marquee">
+    <img src="assets/logos/lotta.jpg" alt="lotta">
+    <img src="assets/logos/halara.jpg" alt="Halara">
+    <img src="assets/logos/hej-organic.jpg" alt="hej organic">
+    <img src="assets/logos/selflove.jpg" alt="Selflove Design">
+    <img src="assets/logos/woofs.jpg" alt="Woofs">
+    <img src="assets/logos/vitalrin.jpg" alt="Vitalrin Sonnenkomplex">
+    <img src="assets/logos/watch-that-patch.jpg" alt="Watch that patch">
+    <img src="assets/logos/coreplex.jpg" alt="coreplex">
+    <img src="assets/logos/nicquit.jpg" alt="Nicquit">
+    <img src="assets/logos/matrixx.jpg" alt="Matrixx">
+    <img src="assets/logos/annitano.jpg" alt="Annitaño">
+    <img src="assets/logos/foto.jpg" alt="Foto">
+    <img src="assets/logos/pink-8.jpg" alt="Markenlogo">
+    <img src="assets/logos/pink-drop.jpg" alt="Markenlogo">
+    <img src="assets/logos/a-neu.jpg" alt="Markenlogo">
+  </div>
+</div>
+
+<section id="arbeiten">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <div class="eyebrow rv">Portfolio</div>
+        <h2 class="rv">Ausgewählte <em>Videos</em></h2>
+      </div>
+      <p class="rv">Beauty, Food, Tier und Lifestyle. Antippen, um ein Video mit Ton abzuspielen.</p>
+    </div>
+    <div class="reel" id="reel">
+      <div class="clip rv"><video src="assets/video/ugc-04.mp4" poster="assets/video/ugc-04.jpg" playsinline preload="none"></video><span class="label">Beauty</span><span class="play"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg></span></div>
+      <div class="clip rv"><video src="assets/video/ugc-03.mp4" poster="assets/video/ugc-03.jpg" playsinline preload="none"></video><span class="label">Food</span><span class="play"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg></span></div>
+      <div class="clip rv"><video src="assets/video/ugc-01.mp4" poster="assets/video/ugc-01.jpg" playsinline preload="none"></video><span class="label">Tier</span><span class="play"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg></span></div>
+      <div class="clip rv"><video src="assets/video/ugc-09.mp4" poster="assets/video/ugc-09.jpg" playsinline preload="none"></video><span class="label">Gesundheit</span><span class="play"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg></span></div>
+      <div class="clip rv"><video src="assets/video/ugc-05.mp4" poster="assets/video/ugc-05.jpg" playsinline preload="none"></video><span class="label">Delivery</span><span class="play"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg></span></div>
+      <div class="clip rv"><video src="assets/video/ugc-07.mp4" poster="assets/video/ugc-07.jpg" playsinline preload="none"></video><span class="label">Storytime</span><span class="play"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg></span></div>
+      <div class="clip rv"><video src="assets/video/ugc-10.mp4" poster="assets/video/ugc-10.jpg" playsinline preload="none"></video><span class="label">Skincare</span><span class="play"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg></span></div>
+      <div class="clip rv"><video src="assets/video/ugc-06.mp4" poster="assets/video/ugc-06.jpg" playsinline preload="none"></video><span class="label">Tier · App</span><span class="play"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg></span></div>
+      <div class="clip rv"><video src="assets/video/ugc-02.mp4" poster="assets/video/ugc-02.jpg" playsinline preload="none"></video><span class="label">Produkt</span><span class="play"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg></span></div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="leistungen">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <div class="eyebrow rv">Leistungen</div>
+        <h2 class="rv">Was ich für deine <em>Marke</em> mache</h2>
+      </div>
+      <p class="rv">Vom einzelnen Video bis zur laufenden Kampagne. Du bekommst Rohmaterial oder fertig geschnittenen Content, ganz wie du ihn brauchst.</p>
+    </div>
+    <div class="svc">
+      <div class="rv"><span>01</span><h3>UGC-Videos</h3><p>Hochformat-Videos mit Hook, Produkt und klarer Botschaft. Für Ads, Website und Social Media.</p></div>
+      <div class="rv"><span>02</span><h3>Ad-Content</h3><p>Mehrere Hooks und Varianten pro Video, damit du in deinen Kampagnen testen kannst.</p></div>
+      <div class="rv"><span>03</span><h3>Produktfotos</h3><p>Natürliche Lifestyle-Fotos mit deinem Produkt, aufgenommen im echten Alltag.</p></div>
+      <div class="rv"><span>04</span><h3>Kooperationen</h3><p>Posts auf meinen eigenen Kanälen auf TikTok und YouTube, für echte Reichweite.</p></div>
+      <div class="rv"><span>05</span><h3>Kampagnen-Support</h3><p>Ich denke bei Konzept, Skript und Briefing mit, damit der Content zum Ziel passt.</p></div>
+      <div class="rv"><span>06</span><h3>1:1 UGC-Coaching</h3><p>Für Einsteigerinnen, die selbst als UGC Creator starten wollen.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="ueber-mich">
+  <div class="wrap about-grid">
+    <div class="about-img rv">
+      <img src="assets/img/p02.jpg" alt="Sophie mit Schmuck">
+      <img src="assets/img/p06.jpg" alt="Sophies Pudel mit Tablet">
+    </div>
+    <div>
+      <div class="eyebrow rv">Über mich</div>
+      <h2 class="rv">Hi, ich bin <em>Sophie.</em></h2>
+      <p class="rv">Ich bin 21, komme aus <strong>Österreich</strong> und lebe auf <strong>Zypern</strong>. Seit rund drei Jahren mache ich Content für Social Media, auf YouTube folgen mir über 47.000 Menschen.</p>
+      <p class="rv">Als UGC Creator ist mein Ziel einfach: Beiträge, die so wirken, als hätte eine Freundin dir das Produkt empfohlen. Ich teste jedes Produkt selbst, schreibe den Hook mit und drehe so lange, bis es sich echt anfühlt.</p>
+      <p class="rv">Mit dabei ist oft meine Pudeldame. Für Tiermarken ist das ein echter Vorteil.</p>
+      <div class="handles rv">
+        <a class="btn btn-ghost" href="https://www.youtube.com/@phiele333" target="_blank" rel="noopener">YouTube · phiele333</a>
+        <a class="btn btn-ghost" href="mailto:phieluxe@gmail.com">phieluxe@gmail.com</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="results" id="ergebnisse">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <div class="eyebrow rv">Ergebnisse</div>
+        <h2 class="rv">Zahlen aus <em>echten</em> Videos</h2>
+      </div>
+      <p class="rv">Screenshots direkt aus TikTok- und YouTube-Analytics, von Kooperationen auf meinen eigenen Kanälen.</p>
+    </div>
+    <div class="stats">
+      <div class="stat rv"><b>937.201</b><div class="what"><strong>Aufrufe auf TikTok</strong>131 neue Follower aus einem einzigen Video</div><img src="assets/img/stat-tt1.jpg" alt="TikTok-Analytics: 937.201 Videoaufrufe"></div>
+      <div class="stat rv"><b>283.816</b><div class="what"><strong>Aufrufe auf YouTube in 21 Tagen</strong>58,6 % durchschnittliche Wiedergabedauer, 8.147 Likes</div><img src="assets/img/stat-yt.jpg" alt="YouTube-Analytics: 283.816 Aufrufe"></div>
+      <div class="stat rv"><b>185.433</b><div class="what"><strong>Aufrufe auf TikTok</strong>Im Schnitt 67 % des Videos angeschaut</div><img src="assets/img/stat-tt2.jpg" alt="TikTok-Analytics: 185.433 Videoaufrufe"></div>
+    </div>
+  </div>
+</section>
+
+<section id="fotos">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <div class="eyebrow rv">Fotos</div>
+        <h2 class="rv">Produkt- und <em>Lifestyle</em>-Fotos</h2>
+      </div>
+      <p class="rv">Natürliches Licht, echte Umgebung, dein Produkt im Mittelpunkt.</p>
+    </div>
+    <div class="photos">
+      <img class="rv" loading="lazy" src="assets/img/p05.jpg" alt="Gesichtscreme in der Hand">
+      <img class="rv" loading="lazy" src="assets/img/p10.jpg" alt="Kaffee und Tasche im Auto">
+      <img class="rv" loading="lazy" src="assets/img/p07.jpg" alt="Pudel mit Hundefutter">
+      <img class="rv" loading="lazy" src="assets/img/p04.jpg" alt="Serum-Fläschchen">
+      <img class="rv" loading="lazy" src="assets/img/p16.jpg" alt="Iced Coffee am Schreibtisch">
+      <img class="rv" loading="lazy" src="assets/img/p03.jpg" alt="Augenpads">
+      <img class="rv" loading="lazy" src="assets/img/p08.jpg" alt="Katze mit Katzenfutter">
+      <img class="rv" loading="lazy" src="assets/img/p12.jpg" alt="Matcha-Drinks im Auto">
+      <img class="rv" loading="lazy" src="assets/img/p01.jpg" alt="Creme im Gesicht">
+      <img class="rv" loading="lazy" src="assets/img/p13.jpg" alt="Handy und Laptop">
+      <img class="rv" loading="lazy" src="assets/img/p20.jpg" alt="Sophie im Hotel">
+      <img class="rv" loading="lazy" src="assets/img/p09.jpg" alt="Katze mit Futterdosen">
+      <img class="rv" loading="lazy" src="assets/img/p15.jpg" alt="Technik auf dem Bett">
+      <img class="rv" loading="lazy" src="assets/img/p11.jpg" alt="Laptop vor Skyline">
+    </div>
+  </div>
+</section>
+
+<section class="services" id="feedback">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <div class="eyebrow rv">Feedback</div>
+        <h2 class="rv">Was <em>Marken</em> sagen</h2>
+      </div>
+      <p class="rv">Auszüge aus Nachrichten nach abgeschlossenen Kooperationen.</p>
+    </div>
+    <div class="quotes">
+      <div class="quote rv"><p>Wir würden wirklich sehr gerne wieder mit dir arbeiten und sind große Fans deiner Arbeit.</p><span>Folgeauftrag · zwei Videos, zwei Fotos</span></div>
+      <div class="quote rv"><p>Danke dir vielmals! Das Video ist sehr gut geworden!</p><span>Marke nach Lieferung</span></div>
+      <div class="quote rv"><p>Deine Videos haben uns gut gefallen und wir möchten Sie herzlich einladen, noch einmal an unserer Oktoberkampagne teilzunehmen.</p><span>Einladung zur nächsten Kampagne</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="ablauf">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <div class="eyebrow rv">Ablauf</div>
+        <h2 class="rv">So arbeiten wir <em>zusammen</em></h2>
+      </div>
+    </div>
+    <div class="steps">
+      <div class="step rv"><h3>Anfrage</h3><p>Du schreibst mir kurz, um welches Produkt und welches Ziel es geht.</p></div>
+      <div class="step rv"><h3>Kennenlernen</h3><p>Gerne telefonieren wir, damit ich deine Marke und Zielgruppe verstehe.</p></div>
+      <div class="step rv"><h3>Produkt &amp; Briefing</h3><p>Du schickst das Produkt, ich teste es und plane Hooks und Szenen.</p></div>
+      <div class="step hl rv"><h3>Lieferung</h3><p>Nach 7 Tagen hast du deinen fertigen Content.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="kontakt">
+  <div class="wrap">
+    <div class="eyebrow rv">Kontakt</div>
+    <h2 class="rv">Lass uns <em>zusammenarbeiten.</em></h2>
+    <p class="rv">Wenn ich zu deiner Marke passe, freue ich mich, dich und dein Produkt kennenzulernen. Schreib mir eine E-Mail, gerne telefonieren wir auch.</p>
+    <div class="hero-actions rv">
+      <a href="mailto:phieluxe@gmail.com?subject=UGC-Anfrage" class="btn btn-light">E-Mail schreiben</a>
+      <a href="https://www.youtube.com/@phiele333" target="_blank" rel="noopener" class="btn btn-ghost">YouTube ansehen</a>
+    </div>
+    <a class="mail rv" href="mailto:phieluxe@gmail.com">phieluxe@gmail.com</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="row">
+      <span>© 2026 PHIELUXE MARKETING AGENCY LIMITED</span>
+      <span><button data-legal="impressum">Impressum</button> &nbsp;·&nbsp; <button data-legal="datenschutz">Datenschutz</button></span>
+    </div>
+    <div class="legal" id="impressum">
+      <h4>Impressum</h4>
+      <p>PHIELUXE MARKETING AGENCY LIMITED<br>
+      Private Company Limited by Shares (Ltd.)<br>
+      Palaion Patron Germanou 11, 8011 Paphos, Zypern<br>
+      Registernummer: HE 485483 · Republik Zypern<br>
+      USt-IdNr.: 60294853K<br>
+      Director &amp; Secretary: Sophie Kösslbacher<br>
+      Tätigkeit: Marketing- und Werbedienstleistungen</p>
+      <p>E-Mail: <a href="mailto:phieluxe@gmail.com">phieluxe@gmail.com</a><br>Telefon: +43 699 17173433</p>
+      <p>Verbraucher haben die Möglichkeit, Beschwerden an die Online-Streitbeilegungsplattform der EU zu richten: <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">ec.europa.eu/consumers/odr</a>. Beschwerden können auch direkt an die oben genannte E-Mail-Adresse gerichtet werden.</p>
+      <p>Die Inhalte dieser Website wurden mit größtmöglicher Sorgfalt erstellt. Für Richtigkeit, Vollständigkeit und Aktualität wird keine Gewähr übernommen.</p>
+    </div>
+    <div class="legal" id="datenschutz">
+      <h4>Datenschutz</h4>
+      <p>Diese Website setzt keine Cookies, verwendet keine Tracking- oder Analyse-Tools und lädt keine Schriften oder Skripte von fremden Servern. Beim Aufruf verarbeitet der Hosting-Anbieter technisch notwendige Daten (z. B. IP-Adresse, Zeitpunkt des Zugriffs) zur Auslieferung der Seite.</p>
+      <p>Wenn du mir eine E-Mail schreibst, verarbeite ich deine Angaben ausschließlich zur Bearbeitung deiner Anfrage. Verantwortlich: PHIELUXE MARKETING AGENCY LIMITED, Kontakt siehe Impressum. Du hast das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung sowie auf Beschwerde bei einer Datenschutzbehörde.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Nav background after scrolling
+const nav=document.getElementById('nav');
+const onScroll=()=>nav.classList.toggle('solid',scrollY>40);
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+// Reveal on scroll
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{rootMargin:'0px 0px -8% 0px'});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+
+// Duplicate logos for a seamless loop
+const m=document.getElementById('marquee');m.innerHTML+=m.innerHTML;
+
+// Portfolio videos: tap to play with sound, only one at a time
+const clips=[...document.querySelectorAll('#reel .clip')];
+clips.forEach(c=>{
+  const v=c.querySelector('video');
+  c.addEventListener('click',()=>{
+    if(v.paused){
+      clips.forEach(o=>{if(o!==c){o.querySelector('video').pause();o.classList.remove('playing')}});
+      v.muted=false;v.play();c.classList.add('playing');
+    }else{v.pause();c.classList.remove('playing')}
+  });
+  v.addEventListener('ended',()=>c.classList.remove('playing'));
+});
+
+// Legal toggles
+document.querySelectorAll('[data-legal]').forEach(b=>b.addEventListener('click',()=>{
+  const el=document.getElementById(b.dataset.legal);
+  document.querySelectorAll('.legal').forEach(l=>{if(l!==el)l.classList.remove('open')});
+  el.classList.toggle('open');
+  if(el.classList.contains('open'))el.scrollIntoView({behavior:'smooth',block:'start'});
+}));
+</script>
+</body>
+</html>
