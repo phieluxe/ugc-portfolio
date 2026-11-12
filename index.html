@@ -96,7 +96,6 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 .marquee{display:flex;gap:30px;width:max-content;animation:scroll 60s linear infinite}
 .brands:hover .marquee{animation-play-state:paused}
 @keyframes scroll{to{transform:translateX(-50%)}}
-@media(prefers-reduced-motion:reduce){.marquee{animation:none;flex-wrap:wrap;justify-content:center;width:auto}}
 .marquee img{width:72px;height:72px;border-radius:50%;object-fit:cover;filter:grayscale(1);opacity:.8;transition:filter .3s,opacity .3s}
 .marquee img:hover{filter:none;opacity:1}
 
@@ -229,7 +228,7 @@ footer button:hover{color:#fff}
 .lightbox.open{opacity:1;pointer-events:auto}
 .lightbox img{max-height:88vh;max-width:100%;box-shadow:0 30px 60px rgba(0,0,0,.25);transform:scale(.94) rotate(-1deg);transition:transform .4s cubic-bezier(.2,.8,.2,1);background:#fff;padding:10px 10px 40px}
 .lightbox.open img{transform:none}
-@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important}.mark{background-size:100% 36%}.contact .mark{background-size:100% 6%}}
+@media(prefers-reduced-motion:reduce){*:not(.marquee),*::before,*::after{transition:none!important;animation:none!important}.mark{background-size:100% 36%}.contact .mark{background-size:100% 6%}}
 </style>
 </head>
 <body>
